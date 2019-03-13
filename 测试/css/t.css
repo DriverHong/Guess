@@ -1,0 +1,51 @@
+/* body{
+    text-align: center;
+} */
+
+.big{
+    width: 430px;
+    height: 280px;
+    background:#cccccc;
+    margin: 100px auto;
+    position:relative;  /* 相对定位 */
+}
+
+.message{
+    width: 400px;
+    height: 250px;
+    background: #ed0000;
+    border-radius: 10px;
+    border:1px solid black;
+    position:absolute;  /* 绝对定位 绝对定位的div放在相对定位的div里面*/
+    top: 50%;   /* 在大div里面从上往下50% */
+    left:50%;   /* 在大div里面从左往右50% */
+    margin-top: -125px;    /* 小盒子的高的一半 */
+    margin-left: -200px;   /* 小盒子的宽的一半 */
+}
+
+.pmessage{
+    height: 150px;
+    font-size: 15px;
+    color: #fff;
+    background: #bf0000;
+    line-height: 1.1;
+}
+
+.foot{
+    margin-top: 5px;
+    text-align: center;
+}
+
+h3{
+    margin-left: 15px;
+}
+
+img{
+    height: 150px;
+    float: right;
+}
+
+p{
+    padding: 10px;
+    margin-left: 10px;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+    <title>猜数字游戏</title>
+
+  </head>
+ 
+  <body>
+      <div class="c">
+    <h1>猜数字游戏</h1>
+
+    <p>我刚才随机选定了一个100以内的自然数。</p>
+    <p>看你能否在 10 次以内猜中它。</p> 
+    <p>每次我都会告诉你所猜的结果是高了还是低了。</p>
+
+    <div class="form">
+      <label for="guessField">请猜数: </label>
+      <input type="text" id="guessField" class="guessField">
+      <input type="submit" value="确定" class="guessSubmit">
+    </div>
+
+    <div class="resultParas">
+      <p class="guesses"></p>   <!-- 显示用户猜的数字 -->
+      <p class="lastResult"></p>   <!-- 显示最终结果 -->
+      <p class="lowOrHi"></p>   
+    </div>
+</div>
+
+  </body>
+</html>
