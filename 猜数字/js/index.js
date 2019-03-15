@@ -1,6 +1,11 @@
 //const 一旦声明必须马上初始化并且不能重新复制
 window.onload = function () {
-    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    /* floot()函数返回一个小于或等于的x的最大正数（去除小数部分）
+    由于将一个 0 和 1 之间的随机小数的小数部分舍弃，返回的整数一定为 0，
+    因此在此基础上加 1 之后返回值一定为 1。要在舍弃小数部分之前将它乘以100。
+    便可得到 0 到 99 之间的随机数
+    */
+    let randomNumber = Math.floor(Math.random() * 100)+1;
     const guesses = document.querySelector(".guesses");
     const lastResult = document.querySelector(".lastResult");
     const lowOrHi = document.querySelector(".lowOrHi");
