@@ -16,7 +16,7 @@ window.onload = function () {
     let guessCount = 1;
     let resetButton;
     /* 判断函数 */
-    function CheckGuess() {
+   guessSubmit.onclick= function CheckGuess() {
         //获取到用户输入的值，赋给userguess
         const userguess = Number(guessField.value);
         if (guessCount == 1) {
@@ -48,7 +48,7 @@ window.onload = function () {
         guessField.focus();
     }
     /* 添加事件监听 */
-    guessSubmit.addEventListener('click', CheckGuess);
+   /*  guessSubmit.addEventListener('click', CheckGuess); */
 
     /* 游戏结束函数 */
     function setGameOver() {
