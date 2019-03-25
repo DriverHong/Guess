@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>变变变</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <select name="c" id="co">
+        <option value="black" >黑色</option>
+        <option value="white" selected>白色</option>
+    </select>
+    <p>Yooooo!魔术师~</p>
+    <script>
+        var select=document.querySelector('select');
+        var html=document.querySelector('html');
+        document.body.style.padding = '10px';
+        function change(bgcolor,fontcolor){
+            html.style.backgroundColor=bgcolor;
+            html.style.color=fontcolor;   /* html字体颜色 */
+        }
+        select.onchange=function (){
+            (select.value==='black')?change('black','white'):change('white','black');
+        }
+    </script>
+</body>
+</html>
