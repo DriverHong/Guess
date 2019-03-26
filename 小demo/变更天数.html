@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>变更天数</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
 </head>
+<style>
+    li{
+        text-align: center;
+        line-height: 60px;
+        list-style: none;
+        float: left;
+        height: 60px;
+        width: 150px;
+        margin-left: 15px;
+        margin-top: 20px;
+        background: #ec96ec;
+    }
+</style>
 <body>
     选择月份<select name="month" id="month">
         <option value="Jan">1月</option>
@@ -18,7 +30,7 @@
         <option value="Jul">6月</option>
         <option value="Jun">7月</option>
         <option value="Aug">8月</option>
-        <option value="Set">9月</option>
+        <option value="Sept">9月</option>
         <option value="Oct">10月</option>
         <option value="Nov">11月</option>
         <option value="Dec">12月</option>
@@ -26,10 +38,30 @@
     <h1></h1>
     <ul></ul>
     <script>
-        var select=document.querySelector('select');
-        var list=document.querySelector('ul');
-        var h1=document.querySelector('h1');
-        
+        var select = document.querySelector('select');
+        var list = document.querySelector('ul');
+        var h1 = document.querySelector('h1');
+        select.onchange = function () {
+            var choice = select.value;
+            var days = 31;
+            if (choice === 'Feb') {
+                days = 28;
+            } else if (choice === 'Api' || choice === 'Jun' || choice === 'Sept' || choice === 'Nov') {
+                days = 30;
+            }
+            createCalendar(days, choice);
+        }
+        function createCalendar(days, choice) {
+            list.innerHTML = '';
+            h1.textContent = choice;
+            for (var i = 1; i <= days; i++) {
+                var listItem = document.createElement('li');
+                listItem.textContent = i;
+                list.appendChild(listItem);
+            }
+        }
+        createCalendar(31, 'January');
     </script>
 </body>
+
 </html>
