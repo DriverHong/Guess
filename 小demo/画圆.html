@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>画圆</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <p></p>
-    <input type="submit" value="update">
+    <style>
+        canvas {
+            background: yellow;
+            display: block;
+        }
 
+        button {
+            position: absolute;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="">重画</button>
+    <canvas width="670" height="400"></canvas>
     <script>
-        
+        var canvas = document.querySelector('canvas');
+        var sub = document.getElementById('button');
     </script>
 </body>
+
 </html>
