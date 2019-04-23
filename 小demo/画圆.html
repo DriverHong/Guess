@@ -14,45 +14,47 @@
 
         button {
             position: absolute;
+            /* 绝对定位 */
             margin-top: 5px;
-            margin-left: 5px;
+            margin-left: 345px;
+        }
+
+        .cen {
+            width: 670px;
+            margin: 0 auto;
         }
     </style>
 </head>
 
 <body>
-    <button onclick="">重画</button>
-    <canvas width="670" height="400"></canvas>
+    <button>重画</button>
+
+    <div class="cen">
+        <canvas width="670" height="400"></canvas>
+    </div>
+
     <script>
         var btn = document.querySelector('button');
         var canvas = document.querySelector('canvas');
-    /* var btn = document.querySelector('button');
-        var canvas = document.querySelector('canvas');
-        var ctx = canvas.getContext('2d');
-    
-        var WIDTH = document.documentElement.clientWidth;
-        var HEIGHT = document.documentElement.clientHeight;
-    
-        canvas.width = WIDTH;
-        canvas.height = HEIGHT;
-    
+        var ctx = canvas.getContext('2d');     /* 内建的 HTML5 对象，拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。 */
+        var width = canvas.width;
+        var height = canvas.height;     /* 获取屏幕高度和宽度*/
+
         function random(number) {
-          return Math.floor(Math.random()*number);
+            return Math.floor(Math.random() * number);
         }
-    
+
         function draw() {
-          ctx.clearRect(0,0,WIDTH,HEIGHT);
-          for (var i = 0; i < 100; i++) {
-            ctx.beginPath();
-            ctx.fillStyle = 'rgba(255,0,0,0.5)';
-            ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-            ctx.fill();
-          }
+            ctx.clearRect(0, 0, width, height);
+            for (var i = 0; i < 100; i++) {
+                ctx.beginPath();     /* 开始一条路径，或重置当前的路径,否则无法完成画圆 */
+                ctx.arc(random(670), random(400), random(50), 0, 2 * Math.PI);     /* 画圆 */
+                ctx.fillStyle = 'rgba(255,0,0,0.5)';     /* 定义颜色 */
+                ctx.fill();     /* 填充颜色 */
+            }
         }
-    
-        btn.addEventListener('click',draw); */
 
-
+        btn.addEventListener('click', draw);
     </script>
 </body>
 
